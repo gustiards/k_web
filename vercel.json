@@ -1,7 +1,8 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "public/index.php",
+      "src": "composer.json",
       "use": "@vercel/php"
     }
   ],
