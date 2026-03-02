@@ -25,3 +25,6 @@ RUN sed -i 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available
 CMD sed -i "s/80/${PORT}/g" /etc/apache2/ports.conf && \
     sed -i "s/:80/:${PORT}/g" /etc/apache2/sites-available/000-default.conf && \
     apache2-foreground
+
+EXPOSE 80
+CMD ["apache2-foreground"]
